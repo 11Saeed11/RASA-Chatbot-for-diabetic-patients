@@ -1,0 +1,128 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - i am good
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: share_experiance_for_exercise
+  examples: |
+    - I want to share my experiance
+    - I want to share my photo
+    - I want to share my exercise pic
+    - I want to share my exercise
+    - I want to show you my exercise
+- intent: want_motivation_to_exercise
+  examples: |
+    - I want to feel inspired
+    - I want to feel motivated
+    - I need motivation
+    - Motivate me
+    - show me a great exercise
+    - suggest an exercise for me
+    - I feel bored to exercise
+    - I dont feel like Exercising
+    - Why do we excercise?
+    - What do you know about training?
+    - Training? why?
+
+
+- intent: get_number_of_calories
+  examples: |
+    - I want to know the calroies in a [banana](food)
+    - calories in an [apple](food)
+    - How many calories are in a [choclate cake](food)
+    - How many calroies are in a [shawarma sandwitch](food)
+    - Calories in a [parata bread](food)
+    - i want to know the number of calories in an apple
+- lookup: food # this version will cover fruits as food, to alower complexity
+  examples: |
+    - apple
+    - pineapple
+    - banana
+    - carrot
+    - orange
+    - strawberry
+    - tomato
+    - lemon
+    - grape
+    - cherry
+    - mango

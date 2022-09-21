@@ -1,0 +1,18 @@
+﻿# Here is the sqlite3 codes to crate a table and fill it!
+
+
+CREATE TABLE CaloriesDB(Food VARCHAR(25),Calories INT,Carbohydrates DOUBLE);
+INSERT INTO CaloriesDB values('apple', 95, 27);
+INSERT INTO CaloriesDB values('pineapple', 500, 119);
+INSERT INTO CaloriesDB values('banana', 100, 28);
+INSERT INTO CaloriesDB values('carrot', 30, 7);
+INSERT INTO CaloriesDB values('orange', 60, 15);
+INSERT INTO CaloriesDB values('strawberry', 6, 2);
+INSERT INTO CaloriesDB values('tomato', 22, 5);
+INSERT INTO CaloriesDB values('lemon', 17, 6);
+INSERT INTO CaloriesDB values('grape', 3, 1);
+INSERT INTO CaloriesDB values('cherry', 4, 1);
+INSERT INTO CaloriesDB values('mango', 140, 35);
+INSERT INTO CaloriesDB values('coconut', 1400, 61);
+INSERT INTO CaloriesDB values('watermelon', 1355, 341);
+INSERT INTO CaloriesDB values('pomegranate', 212, 53);

@@ -1,0 +1,68 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- mood_great
+- greet
+- get_number_of_calories
+- goodbye
+- affirm
+- deny
+- mood_unhappy
+- bot_challenge
+- share_experiance_for_exercise
+- want_motivation_to_exercise
+entities:
+- food
+slots:
+  food:
+    type: any
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "oh, hi there, how was your day?"
+  - text: "Hi there, how is it going with ya?"
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: "Did that help you?"
+  - text: "Does it feel better now?"
+  utter_happy:
+  - text: "Great, carry on!"
+  - text: "Wonderful!"
+  - text: "I am happy for that"
+  utter_goodbye:
+  - text: "Bye"
+  - text: "See ya then"
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  utter_How_can_I_help:
+  - text: "So, How can I help you?"
+  - text: "any help needed?"
+  utter_your_Experiance_shared:
+  - text: "your experiance have been shared, hurray!"
+  - text: "we have shared it!"
+  utter_motivate_to_exercise: # you can add like 15 diffrent messages so it can be shared randomly
+  #Ref for Burning Calories: https://www.livestrong.com/article/300443-how-many-calories-do-you-burn-walking-30-minutes-to-an-hour/ 
+  - text: "Do you know that walking for an hour can burn a up to 723 Calories!"
+  #Ref for some motivational sentances for Exercising: https://www.verywellfit.com/fitness-motivation-4157145
+  - text: "Trying to get back to the weight you were in college"
+  - text: "What about, Looking good in a bathing suit?"
+  - text: "Exercising because it feels good"
+  - text: "Remember that exercising help you zone out, and think clearer"
+  - text: "You can kickout stress by swimming or having a short run"
+  - text: "If you run for 1 minute constantly, it will become 3 minutes as you get used to it"
+  - text: "Dont give up on exercising, you just need to start then you will enjoy it!"
+  utter_assure_getting_motivated:
+  - text: "are you motivated yet?"
+  - text: "did that motivate you?"
+
+actions:
+- utter_How_can_I_help
+- utter_greet
+- utter_happy
+- query_number_of_calories
+- utter_assure_getting_motivated

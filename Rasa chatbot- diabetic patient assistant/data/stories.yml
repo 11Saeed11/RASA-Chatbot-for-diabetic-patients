@@ -1,0 +1,79 @@
+version: "2.0"
+
+stories:
+# As you can see, we ask the user for the needed help if we are aware he is in 
+# good mood as part of the paths of greeting the user
+- story: Greet a happy user 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_How_can_I_help
+
+- story: Greet an unhappy user (path 1)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_How_can_I_help
+
+
+- story: Greet an unhappy user (path 2)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+
+
+# Here is the Story path for the objective of sharing the exercise experance
+- story: Share exercise experiance
+  steps:
+  - intent: share_experiance_for_exercise
+  - action: utter_your_Experiance_shared
+
+# Here is the Story paths for the objective of getting motivated to exercise
+- story: Want Motivation
+  steps:
+  - intent: want_motivation_to_exercise
+  - action: utter_motivate_to_exercise
+  - action: utter_assure_getting_motivated
+  - intent: affirm 
+  - action: utter_happy
+
+# Here is the Story paths for the objective of getting number of calories in food
+- story: Number of Calories
+  steps:
+  - intent: get_number_of_calories
+    entities: 
+    - food: "Banana"
+  - slot_was_set:
+    - food: "Banana"
+  - action: query_number_of_calories
+
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_How_can_I_help
+  - intent: get_number_of_calories
+    entities: 
+    - food: "Banana"
+  - slot_was_set:
+    - food: "Banana"
+  - action: query_number_of_calories
+
+
